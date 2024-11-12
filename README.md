@@ -56,3 +56,40 @@
 - Build the Delete Button
 - Build the Edit Todo Component
 
+## 三、测试
+- 
+- project/
+├── client/                     # 前端
+│   └── src/
+│       └── components/
+│           └── __tests__/     # React组件测试
+├── server/                     # 后端
+│   └── __tests__/
+│       ├── unit/              # 单元测试
+│       └── integration/       # 集成测试
+└── e2e/                       # 端到端测试
+    └── specs/                 # 测试用例  
+
+## 项目结构
+\`\`\`
+project/
+├── client/          # React 前端
+├── server/          # Express 后端
+└── e2e/             # 端到端测试
+\`\`\`
+
+## 开发指南
+1. 克隆项目
+2. 安装依赖
+3. 运行开发服务器
+
+## 测试
+- 单元测试
+- 集成测试
+- E2E 测试
+
+## Git 工作流
+- main: 生产环境
+- develop: 开发环境
+- feature/*: 新功能
+- test/*: 测试相关
