@@ -8,13 +8,13 @@
     "test": "jest"
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "pg": "^8.7.1",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "cors": "^2.8.5"
+    "express": "^4.21.1",
+    "pg": "^8.13.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15",
-    "jest": "^27.4.5"
+    "jest": "^27.4.5",
+    "nodemon": "^2.0.22"
   }
 }
