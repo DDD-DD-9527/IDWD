@@ -1,19 +1,18 @@
-import React, { Fragment } from "react";
+import React from "react";
 import "./App.css";
 
-//components
-
+import { ErrorBoundary } from "./components/ErrorBoundary";
 import InputTodo from "./components/InputTodo";
 import ListTodos from "./components/ListTodos";
 
 function App() {
   return (
-    <Fragment>
+    <ErrorBoundary>
       <div className="container">
         <InputTodo />
         <ListTodos />
       </div>
-    </Fragment>
+    </ErrorBoundary>
   );
 }
 
