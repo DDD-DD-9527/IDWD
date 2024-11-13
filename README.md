@@ -93,3 +93,15 @@ project/
 - develop: 开发环境
 - feature/*: 新功能
 - test/*: 测试相关
+
+## 后续开发
+创建新功能:
+git checkout -b feature/新功能名 develop
+# 开发完成后
+git push -u origin feature/新功能名
+# 在 GitHub 创建 Pull Request 到 develop 分支
+添加测试:
+git checkout -b test/添加测试 develop
+# 添加测试文件
+git add .
+git commit -m "test: 添加单元测试"
