@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:unit": "jest --projects=unit",
+    "test:integration": "jest --projects=integration",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "author": "henry",
   "license": "ISC",
@@ -12,5 +16,9 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "pg": "^7.18.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "supertest": "^6.1.3"
   }
 }
