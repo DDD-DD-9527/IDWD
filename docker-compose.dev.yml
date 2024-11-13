@@ -1,0 +1,47 @@
+# 开发环境 Docker 配置
+version: '3.8'
+
+services:
+  # 前端服务配置
+  client:
+    build: 
+      context: ./client
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./client:/app  # 代码热更新
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://server:5000
+    depends_on:
+      - server
+
+  # 后端服务配置
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=db
+    depends_on:
+      - db
+
+  # 数据库服务
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: perntodo
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data: 
