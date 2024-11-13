@@ -105,3 +105,10 @@ git checkout -b test/添加测试 develop
 # 添加测试文件
 git add .
 git commit -m "test: 添加单元测试"
+
+...
+
+## 部署指南
+详细的本地部署步骤请参考 [DEPLOY.md](DEPLOY.md)
+
+...
